@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>Dashboard</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<meta name="theme-color" content="#fff">
+		<link rel="manifest" href="https://erp.skit.ac.in/manifest.json">
+        <!--<link rel="SHORTCUT ICON" href="https://erp.skit.ac.in/uploads/images/411bf10f2399c0421c65110a04bb098143fb8dfb943e55143ef8805eee3397e2bb0f30d9f0d3b3586e29fd66e8f67e8bff07099a4aaccbf0a53ccf8181bae465.png" />-->
+        <link rel="SHORTCUT ICON" href="https://erp.skit.ac.in/skit192.png.pagespeed.ce.xvsh7d9Iwr.png"/>
+		<link rel="apple-touch-icon" href="https://erp.skit.ac.in/skit192.png.pagespeed.ce.xvsh7d9Iwr.png">
+        <!--<link rel="manifest" href="https://erp.skit.ac.in/assets/onesignal/manifest.json" />
+			<script async defer src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" ></script>
+			<script>
+			var OneSignal = window.OneSignal || [];
+			OneSignal.push(function() {
+			OneSignal.init({
+			appId: "f6571474-5c33-42fc-9b6a-af813e3604a1",
+			autoregister: true
+			});
+			OneSignal.on('subscriptionChange', function(isSubscribed) {
+			if (isSubscribed) {
+			// The user is subscribed
+			//   Either the user subscribed for the first time
+			//   Or the user was subscribed -> unsubscribed -> subscribed
+			OneSignal.getUserId( function(userId) {
+			$.ajax({
+			type: 'POST',
+			url: "https://erp.skit.ac.in/reports/onesignal_subscribe",
+			data: "id=" + userId,
+			dataType: "html",
+			success: function(data) {
+			console.log('Thank you for subscribing');
+			}
+			});
+			});
+			}
+			});
+			});
+		</script>-->
+		<link rel="stylesheet" href="https://erp.skit.ac.in/assets/pace,_pace.css+offline,_offline-language-english.css+offline,_offline-theme-slide.css+bootstrap,_bootstrap.min.css+fonts,_font-awesome.css+fonts,_icomoon.css+datatables,_datatables.min.css+core,_style.css+core,_hidetable.css+core,_core.css+core,_responsive.css+toastr,_toastr.min.css+core,_mailandmedia.css+datepicker,_datepicker.css+select2,_css,_select2.css+select2,_css,_select2-bootstrap.css.pagespeed.cc.wct10coy75.css"/>
+		
+		
+        <script type="text/javascript" src="https://erp.skit.ac.in/assets/offline/offline.min.js.pagespeed.jm.VPeSI0bV0x.js"></script>
+		<script src="https://erp.skit.ac.in/assets/core,_jquery.min.js+shortcut,_shortcut.js.pagespeed.jc.f-3VNczVGw.js"></script><script>eval(mod_pagespeed_rvqyeXLErX);</script>
+        <!-- <script type="text/javascript" src="https://erp.skit.ac.in/assets/slimScroll/jquery.slimscroll.min.js"></script> -->
+		<script>eval(mod_pagespeed_u7TGZEevn1);</script>
+        <script type="text/javascript" src="https://erp.skit.ac.in/assets/toastr/toastr.min.js.pagespeed.jm.GWuNpgiie7.js"></script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+		<style>.table{width:100%!important}</style>
+        		<style>@media print{a[href]:after{content:none}}</style>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108715513-1"></script>
+		<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('set',{'user_id':'B220499'});gtag('config','UA-108715513-1');</script>
+		<script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/130096964.js"></script>
+        <script type="text/javascript">$(window).load(function(){$(".se-pre-con").fadeOut("slow");;});</script>
+		<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-7830339172388867",
+			enable_page_level_ads: true
+			});
+		</script>-->
+		<!--<script type="text/javascript">
+			(function(c,l,a,r,i,t,y){
+				c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+				t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+				y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+			})(window, document, "clarity", "script", "damogc1o91");
+			window.clarity('set', "user_id", "B220499");
+		</script>-->
+	</head>
+    <body class="skin-blue">
+			
+<!--<div class="se-pre-con"></div>	-->		<!-- header logo: style can be found in header.less -->
+<img id="lds-ring" src="https://erp.skit.ac.in/assets/pace/images/loader-32x/spinner1.gif.pagespeed.ce.Mv9K5mEnns.gif" style="position:fixed; left:10px; top: 10px; height:30px; z-index:999999">
+<header class="header">
+	<a href="https://erp.skit.ac.in/dashboard/index" class="logo">
+		<!-- Add the class icon to your logo image or logo icon to add the margining -->
+		ERP	</a>
+	<!-- Header Navbar: style can be found in header.less -->
+	<nav class="navbar navbar-static-top" role="navigation">
+		<!-- Sidebar toggle button-->
+		<a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		<div class="navbar-right">
+			<ul class="nav navbar-nav">
+				<!-- School Year: style can be found in dropdown.less-->
+												<li class="dropdown messages-menu"><a href=https://erp.skit.ac.in/conversation>
+						<i class="fa fa-envelope-o"></i><span class='label label-danger'><lable class='alert-image'>34</lable></span></a></li>				<!-- Messages: style can be found in dropdown.less-->
+									<li class="dropdown messages-menu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-bell-o"></i>
+													</a>
+											</li>
+								<!-- Notifications: style can be found in dropdown.less -->
+				<!-- User Account: style can be found in dropdown.less -->
+				<li class="dropdown user user-menu">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="https://erp.skit.ac.in/uploads/images/xB220499.jpg.pagespeed.ic.5GqGRWB8jB.jpg" class="user-logo" alt=""/>
+						<span>
+														<i class="caret"></i>
+						</span>   
+					</a>
+										<ul class="dropdown-menu">
+													<!-- Menu Body -->
+							<li class="user-body">
+								<div class="col-xs-6 text-center">
+									<a href="https://erp.skit.ac.in/profile/index">
+										<div><i class="fa fa-briefcase"></i></div>
+										Profile 
+									</a>
+								</div>
+								<div class="col-xs-6 text-center">
+									<a href="https://erp.skit.ac.in/signin/cpassword">
+										<div><i class="fa fa-lock"></i></div>
+										Password 
+									</a>
+								</div>
+							</li>
+												<!-- Menu Footer-->
+						<li class="user-footer">
+							<div class="text-center">
+								<a href="https://erp.skit.ac.in/signin/signout">
+									<div><i class="fa fa-power-off"></i></div>
+									Log out 
+								</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header><div class="wrapper row-offcanvas row-offcanvas-left">
+	<!-- Left side column. contains the logo and sidebar -->
+	<aside class="left-side sidebar-offcanvas">
+		<!-- sidebar: style can be found in sidebar.less -->
+		<section class="sidebar">
+			<!-- Sidebar user panel -->
+			<!--<div class="user-panel">
+				<div class="pull-left image">
+				<img style="display:block" src="https://erp.skit.ac.in/uploads/images/B220499.jpg" class="img-circle" alt="" />
+				</div>
+				<div class="pull-left info">
+				<p>Sachin Gupt..</p>				<a href="https://erp.skit.ac.in/profile/index">
+				<i class="fa fa-hand-o-right color-green"></i>
+								</a>
+				</div>
+			</div>-->
+			<!-- sidebar menu: : style can be found in sidebar.less -->
+									<ul class="sidebar-menu">
+				<li>
+					<a>  </a>
+				</li>
+				<li>
+					<a>  </a>
+				</li>
+				<li><a href="https://erp.skit.ac.in/dashboard"><i class="fa fa-laptop"></i><span>Dashboard</span> </a></li><li><a href="https://erp.skit.ac.in/routine"><i class="fa icon-routine"></i><span>Time Table</span> </a></li><li><a href="https://erp.skit.ac.in/teacher"><i class="fa icon-teacher"></i><span>Teacher</span> </a></li><li><a href="https://erp.skit.ac.in/user"><i class="fa fa-users"></i><span>User</span> </a></li><li><a href="https://erp.skit.ac.in/subject"><i class="fa icon-subject"></i><span>Subject</span> </a></li><li><a href="https://erp.skit.ac.in/conversation"><i class="fa fa-envelope"></i><span>Message</span> </a></li><li class="treeview"><a href="https://erp.skit.ac.in/#"><i class="fa icon-noticemain"></i><span>Announcement</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li><a href="https://erp.skit.ac.in/event"><i class="fa fa-calendar-check-o"></i><span>Event</span> </a></li><li><a href="https://erp.skit.ac.in/holiday"><i class="fa icon-holiday"></i><span>Holiday</span> </a></li><li><a href="https://erp.skit.ac.in/notice"><i class="fa fa-calendar"></i><span>Notice</span> </a></li></ul></li>				<!--
+					<li><a href="https://erp.skit.ac.in/leave/index"><i class="fa fa-bell"></i><span>Leave Application</span></a></li>-->
+										<li>
+						<a href="https://erp.skit.ac.in/feedback/index"><i class="fa fa-comments"></i><span>Feedback</span></a>					</li>
+																<li>
+							<a href="https://erp.skit.ac.in/grievance"><i class="fa fa-comments"></i><span>Grievances</span></a>						</li>
+																																																			<li class="treeview">
+							<a href="#">
+								<i class="fa fa-inr"></i>
+								<span>Fee Management</span>
+								<i class="fa fa-angle-left pull-right"></i>
+							</a>
+							<ul class="treeview-menu">
+																	<li>
+										<a href="https://erp.skit.ac.in/fee/fee_statement"><i class="fa fa-inr"></i><span>Fee Statement</span></a>									</li>
+																									<li>
+										<a href="https://erp.skit.ac.in/fee/trxn_student"><i class="fa icon-invoice"></i> <span>Online Transaction History</span></a>									</li>
+																																															</ul>
+						</li>
+																																				<li class="treeview">
+							<a href="#">
+								<i class="fa fa-clipboard"></i>
+								<span>Attendance</span>
+								<i class="fa fa-angle-left pull-right"></i>
+							</a>
+							<ul class="treeview-menu">
+								
+								<li>
+									<a href="https://erp.skit.ac.in/reports/student_aggregate"><i class="fa icon-eattendance"></i><span>Attendance Report</span></a>								</li>
+								<li>
+									<a href="https://erp.skit.ac.in/reports/student_attendance_all"><i class="fa icon-eattendance"></i><span>Individual Attendance</span></a>								</li>
+								
+							</ul>
+							</li>
+						
+										
+											<li class="treeview">
+							<a href="#">
+								<i class="fa icon-markmain"></i>
+								<span>Examinations</span>
+								<i class="fa fa-angle-left pull-right"></i>
+							</a> 
+							<ul class="treeview-menu">
+																									<li>
+										<a href="https://erp.skit.ac.in/dashboard/rtu_enrollment"><i class="fa icon-assignment"></i><span>RTU Enrollment Form</span></a>									</li>
+									<li>
+										<a href="https://erp.skit.ac.in/dashboard/rtu_marksheets"><i class="fa icon-assignment"></i><span>RTU Marksheets</span></a>									</li>
+																									<li>
+										<a href="https://erp.skit.ac.in/moocs"><i class="fa icon-assignment"></i><span>MOOCs Certificates</span></a>									</li>
+																<li>
+									<a href="https://erp.skit.ac.in/marks/scheme"><i class="fa icon-assignment"></i><span>Examination Scheme</span></a>								</li>
+								<li>
+									<a href="https://erp.skit.ac.in/marks/calendar"><i class="fa icon-assignment"></i><span>Academic Calendars</span></a>								</li>
+							</ul>
+						</li>
+																<li>
+							<a href="https://erp.skit.ac.in/wifi"><i class="fa fa-wifi"></i><span>Wi-Fi</span></a>						</li>
+																<li>
+							<a href="https://erp.skit.ac.in/hmember/laundry"><i class="fa icon-routine"></i> <span>Laundry</span></a>						</li>
+																																				<li class="treeview">
+							<a href="#">
+								<i class="fa icon-library"></i>
+								<span>Learning Resources</span>
+								<i class="fa fa-angle-left pull-right"></i>
+							</a>
+							<ul class="treeview-menu">
+																<li>
+									<a href="https://erp.skit.ac.in/vlectures/gyandan/"><i class="fa icon-library"></i><span>Gyandaan e-Lecture Series</span></a>								</li>
+								<li>
+									<a href="https://erp.skit.ac.in/vlectures"><i class="fa icon-library"></i><span>RTU eContents</span></a>								</li>
+								<li>
+									<a href="https://digilib.skit.ac.in"><i class="fa icon-library"></i><span>Digital Library</span></a>								</li>
+								<li>
+									<a href="https://192.168.1.13:8080/xmlui"><i class="fa icon-library"></i><span>SKIT Institutional Repository</span></a>								</li>
+								<li>
+									<a href="http://192.168.1.10/video.htm"><i class="fa icon-library"></i><span>Video Library (Digilib)</span></a>								</li>
+							</ul>
+						</li>
+																					<li>
+							<a href="https://erp.skit.ac.in/admission/view_docs"><i class="fa fa-clipboard"></i><span>View My Documents</span></a>						</li>
+																<li>
+							<a href="https://erp.skit.ac.in/admission/docs"><i class="fa fa-image"></i><span>Document Checklist</span></a>						</li>
+																															<li>
+							<a href="https://erp.skit.ac.in/dashboard/images"><i class="fa fa-image"></i><span>SKIT Image Database</span></a>						</li>
+										
+					 
+					 
+					
+					
+					
+			</ul>
+		</section>
+		<!-- /.sidebar -->
+	</aside>																							<aside class="right-side">
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12" id="subview">
+				<div class="row">
+			
+	
+					<!--<div class="col-lg-3 col-xs-6">
+				<div class="small-box ">
+				<a class="small-box-footer bg-orange-dark" href="https://erp.skit.ac.in/teacher">
+				<div class="icon bg-orange-dark" style="padding: 9.5px 18px 8px 18px;">
+				<i class="fa icon-teacher"></i>
+				</div>
+				<div class="inner ">
+				<h3 class="text-white">
+				408				</h3 class="text-white">
+				<p class="text-white">
+				Teacher				</p>
+				</div>
+				</a>
+				</div>
+			</div>-->
+			
+			
+			
+						<!--<div class="col-lg-3 col-xs-6">
+				<div class="small-box ">
+				<a class="small-box-footer bg-teal-light" href="https://erp.skit.ac.in/subject">
+				<div class="icon bg-teal-light" style="padding: 9.5px 18px 8px 18px;">
+				<i class="fa icon-subject"></i>
+				</div>
+				<div class="inner ">
+				<h3 class="text-white">
+				12				</h3 class="text-white">
+				<p class="text-white">
+				Subject				</p>
+				</div>
+				</a>
+				</div>
+			</div>-->
+			
+			
+			
+						<!--<div class="col-lg-3 col-xs-6">
+				<div class="small-box ">
+				<a class="small-box-footer bg-pink-light" href="https://erp.skit.ac.in/event">
+				<div class="icon bg-pink-light" style="padding: 9.5px 18px 8px 18px;">
+				<i class="fa fa-calendar-check-o"></i>
+				</div>
+				<div class="inner ">
+				<h3 class="text-white">
+				2				</h3 class="text-white">
+				<p class="text-white">
+				Event				</p>
+				</div>
+				</a>
+				</div>
+			</div>-->
+			
+			
+			
+						<!--<div class="col-lg-3 col-xs-6">
+				<div class="small-box ">
+				<a class="small-box-footer bg-purple-light" href="https://erp.skit.ac.in/holiday">
+				<div class="icon bg-purple-light" style="padding: 9.5px 18px 8px 18px;">
+				<i class="fa icon-holiday"></i>
+				</div>
+				<div class="inner ">
+				<h3 class="text-white">
+				8				</h3 class="text-white">
+				<p class="text-white">
+				Holiday				</p>
+				</div>
+				</a>
+				</div>
+			</div>-->
+			
+			
+			
+					
+				
+</div>
+
+
+
+
+
+   
+	
+	<div class="col-sm-12">
+        <div class="callout callout-danger">
+            <a href="https://erp.skit.ac.in/feedback/even2223"><h4>Click here to submit Feedback for Even Semester 2022-23</h4></a>
+		</div>
+	</div>
+	
+	
+
+ 
+	
+	
+	<div class="col-sm-12">
+        <div class="callout callout-danger">
+            <h4>Your Google Credentials : </h4>
+            <p>Username/Email: B220499@skit.ac.in<br/>
+				Password: 50458778<br/>
+			For accessing Gmail.</p> 
+		</div>
+	</div>
+
+	
+		
+		
+			<div class="row">
+			
+						<div class="col-sm-4">
+				              <section class="panel">
+          <div class="profile-db-head bg-maroon-light">
+            <a href="https://erp.skit.ac.in/profile/index">
+              <img src="https://erp.skit.ac.in/uploads/images/xB220499.jpg.pagespeed.ic.5GqGRWB8jB.jpg" alt=""/>            </a>
+
+            <h1>Sachin Gupta</h1>
+            <p></p>
+
+          </div>
+          <table class="table table-hover">
+              <tbody>
+                  <tr>
+                    <td>
+                      <i class="glyphicon glyphicon-user text-maroon-light"></i>
+                    </td>
+                    <td>Username</td>
+                    <td>B220499</td>
+                  </tr>
+				  				  <tr>
+                    <td>
+                      <i class="glyphicon glyphicon-user text-maroon-light"></i>
+                    </td>
+                    <td>Branch</td>
+                    <td>Computer Science and Engineering</td>
+                  </tr>
+				                    <tr>
+                      <td>
+                        <i class="fa fa-envelope text-maroon-light"></i>
+                      </td>
+                      <td>Email</td>
+                    <td>sachingupta7852099010@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fa fa-phone text-maroon-light"></i>
+                    </td>
+                    <td>Phone</td>
+                    <td>7852099010</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class=" fa fa-globe text-maroon-light"></i>
+                    </td>
+                    <td>Address</td>
+                    <td>Murti Mohalla, Sawai Madhopur - 322201</td>
+                  </tr>
+              </tbody>
+          </table>
+        </section>
+      			</div>
+			<!--				<div class="col-sm-8">
+				<div class="box">
+				<div class="box-body" style="padding: 0px;height: 320px">
+				      <div class="box">
+        <div class="box-header" style="background-color: #fff;">
+          <h3 class="box-title text-black">
+              Notice            </h3>
+        </div>
+
+        <div class="box-body" style="padding: 0px;">
+          <table class="table table-hover">
+              <tbody>
+                              </tbody>
+          </table>
+        </div>
+      </div>				</div>
+				</div>
+				</div>
+			-->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+	
+	
+			
+			<link rel='stylesheet' href='https://erp.skit.ac.in/assets/fullcalendar/lib,_cupertino,_jquery-ui.min.css+fullcalendar.css.pagespeed.cc.XLimr9Vaup.css'/>
+
+<!-- <link rel='stylesheet' href='https://erp.skit.ac.in/assets/fullcalendar/fullcalendar.print.min.css' /> -->
+<script type="text/javascript" src='https://erp.skit.ac.in/assets/fullcalendar/lib/jquery-ui.min.js.pagespeed.jm.kliCpEL7OZ.js'></script>
+<script type="text/javascript" src='https://erp.skit.ac.in/assets/fullcalendar/lib/moment.min.js.pagespeed.jm.doYHYUf6_w.js'></script>
+<script type="text/javascript" src="https://erp.skit.ac.in/assets/fullcalendar/fullcalendar.min.js.pagespeed.jm.ta3Xlasve4.js"></script>
+
+<style type="text/css"></style>
+
+<script type="application/javascript">$(function(){$('#calendar').fullCalendar({theme:true,customButtons:{reload:{text:'Reload',click:function(){}}},header:{left:'prev,next today',center:'title',right:'month,agendaWeek,agendaDay,listMonth'},navLinks:true,editable:false,eventLimit:true,events:[{title:'Blood Donation Camp',start:'2017-09-23T00:00:00',end:'2017-09-23T12:00:00',url:'https://erp.skit.ac.in/event/view/2',color:'#5C6BC0'},{title:'SPIC MACAY  - clasical music event',start:'2017-08-09T13:00:00',end:'2017-08-09T15:00:00',url:'https://erp.skit.ac.in/event/view/1',color:'#5C6BC0'},{title:'Raksha Bandhan',start:'2017-08-07',end:'2017-08-07T',url:'https://erp.skit.ac.in/holiday/view/1',color:'#C24984'},{title:'Independence Day',start:'2017-08-15',end:'2017-08-15T',url:'https://erp.skit.ac.in/holiday/view/2',color:'#C24984'},{title:'Dussehra',start:'2017-09-30',end:'2017-09-30T',url:'https://erp.skit.ac.in/holiday/view/3',color:'#C24984'},{title:'Deepawali',start:'2017-10-15',end:'2017-10-24T',url:'https://erp.skit.ac.in/holiday/view/5',color:'#C24984'},{title:'Makar Sankranti',start:'2018-01-14',end:'2018-01-14T',url:'https://erp.skit.ac.in/holiday/view/6',color:'#C24984'},{title:'HOLI',start:'2018-03-02',end:'2018-03-03T',url:'https://erp.skit.ac.in/holiday/view/7',color:'#C24984'},{title:'Dussehra',start:'2018-10-19',end:'2018-10-19T',url:'https://erp.skit.ac.in/holiday/view/9',color:'#C24984'},{title:'Autumn Break',start:'2018-11-04',end:'2018-11-13T',url:'https://erp.skit.ac.in/holiday/view/10',color:'#C24984'},]});});</script>
+									<!--<div>
+									</div>-->
+			</div>
+		</div>
+	</section>
+</aside>
+</div><!-- ./wrapper -->
+<!-- Bootstrap js -->
+<script src="https://erp.skit.ac.in/assets/bootstrap,_bootstrap.min.js+core,_style.js.pagespeed.jc.meE5mtCx2R.js"></script><script>eval(mod_pagespeed_dO_oIn6DG2);</script>
+<!-- Style js -->
+<script>eval(mod_pagespeed_sUbsgyTSt3);</script>
+<!-- Jquery datatable tools js -->
+<script type="text/javascript" src="https://erp.skit.ac.in/assets/datatables/datatables.min.js.pagespeed.jm.jfnuR2yxAA.js"></script>
+<script src="https://erp.skit.ac.in/assets/core,_core.js+datepicker,_datepicker.js.pagespeed.jc.PCqFCAg0R2.js"></script><script>eval(mod_pagespeed_y$3mFELicn);</script>
+<script>eval(mod_pagespeed_tzP9STC5hO);</script>
+<script type="text/javascript" type="text/javascript" src="https://erp.skit.ac.in/assets/select2/select2.js.pagespeed.jm.cTvcpyy_ex.js"></script>
+<!--<script type="text/javascript" src="https://erp.skit.ac.in/assets/highcharts/highcharts.js"></script>
+	<script type="text/javascript" src="https://erp.skit.ac.in/assets/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="https://erp.skit.ac.in/assets/highcharts/data.js"></script>
+	<script type="text/javascript" src="https://erp.skit.ac.in/assets/highcharts/drilldown.js"></script>
+<script type="text/javascript" src="https://erp.skit.ac.in/assets/highcharts/exporting.js"></script>-->
+<!-- Jquery gritter -->
+<!-- datatable with buttons -->
+<script>shortcut.add("f7",function(){document.getElementById("name_id").focus();document.getElementById("name_id").select();});document.title=document.getElementsByClassName("box-title")[0].innerText;$(document).ready(function(){$('#minimal').DataTable({processing:true,ordering:false});});function CalculateTableSummary(table){try{var intVal=function(i){return typeof i==='string'?i.replace(/[\$,]/g,'')*1:typeof i==='number'?i:0;};var api=table.api();api.columns(".sum").eq(0).each(function(index){var column=api.column(index,{page:'current'});var sum=column.data().reduce(function(a,b){return intVal(a)+intVal(b);},0);if($(column.footer()).hasClass("Int")){$(column.footer()).html(''+sum.toLocaleString("en-IN"));}else{$(column.footer()).html(''+sum.toLocaleString("en-IN"));}});}catch(e){console.log('Error in CalculateTableSummary');console.log(e)}}$(document).ready(function(){$('#example3, #example1, #example2').DataTable({dom:'Bfrtip',buttons:['copyHtml5','excelHtml5','csvHtml5','pdfHtml5'],search:false,deferRender:true,processing:true,pageLength:8,aaSorting:[]});});$(document).ready(function(){$('#xscrollablei, #x2scrollablei, #x3scrollablei, #x4scrollablei').DataTable({dom:'Bfrtip',scrollX:true,buttons:['copyHtml5','excelHtml5','csvHtml5','pdfHtml5'],search:false,deferRender:true,processing:true,aaSorting:[],responsive:{details:false}});});$(document).ready(function(){$('#xscrollable, #x2scrollable, #x3scrollable').DataTable({dom:'Bfrtip',scrollX:true,buttons:['copyHtml5','excelHtml5','csvHtml5','pdfHtml5'],search:false,deferRender:true,processing:true,pageLength:7,aaSorting:[]});});$(document).ready(function(){var table=$('#scrollable, #2scrollable, #3scrollable, #4scrollable').DataTable({dom:'Bfrtip',scrollX:"700px",scrollY:"400px",scrollCollapse:true,paging:false,buttons:['copyHtml5','excelHtml5','csvHtml5','pdfHtml5'],deferRender:true,processing:true,aaSorting:[],search:false,"initComplete":function(settings,json){var api=this.api();CalculateTableSummary(this);},"footerCallback":function(row,data,start,end,display){var api=this.api(),data;CalculateTableSummary(this);return;}});});$(document).ready(function(){var table=$('#scrollable_disablesort').DataTable({dom:'Bfrtip',scrollX:"700px",scrollY:"400px",scrollCollapse:true,paging:false,buttons:['copyHtml5','excelHtml5','csvHtml5','pdfHtml5'],deferRender:true,processing:true,aaSorting:[],search:false,"initComplete":function(settings,json){var api=this.api();CalculateTableSummary(this);},"footerCallback":function(row,data,start,end,display){var api=this.api(),data;CalculateTableSummary(this);return;},bSort:false});});$(document).ready(function(){$('#scrollable2').DataTable({dom:'Bfrtip',scrollY:"400px",scrollCollapse:true,paging:false,buttons:['copyHtml5','excelHtml5','csvHtml5','pdfHtml5'],deferRender:true,processing:true,aaSorting:[],search:false});});$(document).ready(function(){$('#scrollable2wtb').DataTable({dom:'Bfrtip',scrollY:"400px",scrollCollapse:true,paging:false,buttons:['copyHtml5','excelHtml5','csvHtml5','pdfHtml5'],deferRender:true,processing:true,aaSorting:[],search:false});});</script>
+<!-- dataTable with buttons end -->
+<script type="text/javascript">$(function(){$("#withoutBtn").dataTable();});</script>
+<script type="text/javascript">$(function(){$("#withoutBtnSearch").dataTable({"searching":false,"lengthChange":false});});</script>
+<script type="text/javascript">var current_url=window.location.href;var base_url='https://erp.skit.ac.in/';$("ul.sidebar-menu li a").each(function(index,value){if(current_url==$(this).attr('href')){$(this).parents('li').addClass('active');}else if(current_url.startsWith($(this).attr('href'))){$(this).parents('li').addClass('active');}else if($(this).attr('href').startsWith(current_url)){$(this).parents('li').addClass('active');}if(current_url.startsWith(base_url+'markpercentage')&&index==21){$(this).parents('li').removeClass('active');}else if(current_url.startsWith(base_url+'examschedule')&&index==16){$(this).parents('li').removeClass('active');}else if(current_url.startsWith(base_url+'mark')&&index==21){$(this).child('li').removeClass('active');}else if(current_url.startsWith(base_url+'exam')&&index==16){$(this).child('li').removeClass('active');}});</script>
+<script>var link;$(document).on("click",".aclick",function(e){e.preventDefault();link=$(this).attr("href");$('html, body').animate({scrollTop:0},0);window.history.pushState("Details","Title",link);$(".wrapper.row-offcanvas.row-offcanvas-left").removeClass("active");$(".wrapper.row-offcanvas.row-offcanvas-left").removeClass("relative");$.ajax({type:"POST",url:link,success:function(data){$('#subview').html(data);},});});$(document).ready(function(){$(document).ajaxSuccess(function(){document.title=document.getElementsByClassName("box-title")[0].innerText;});});</script>
+<script>if('serviceWorker'in navigator){navigator.serviceWorker.register('https://erp.skit.ac.in/serviceworker.js');}</script>
+<script>$(function(){$('#lds-ring').hide();$(window).on('beforeunload',function(){$('#lds-ring').show();});});</script>
+</body>
+</html>
